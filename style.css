@@ -1,0 +1,15 @@
+p {
+    font-size: 1000%;
+    text-align: center;
+}
+
+h1 {
+    font-size: xx-large;
+    color: blueviolet;
+    text-align: center;
+}
+
+#shuffleButton {
+    text-align: center;
+    color:blueviolet;
+}
