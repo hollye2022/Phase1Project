@@ -1,6 +1,10 @@
 function addEmoji(x) {
     let emoji1 = document.createElement("p");
-    emoji1.addEventListener("click", ()=> callApi());
+    emoji1.addEventListener("click", ()=> {
+        callApi();
+        emoji1.hidden = true;
+
+    });
     document.querySelector("#emojiBar").append(emoji1);
     emoji1.textContent = `${x}`;
 
