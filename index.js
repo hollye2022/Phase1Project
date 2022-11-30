@@ -16,9 +16,9 @@ let h1 = document.createElement("h1")
 h1.textContent ="What Emoji Are You Feeling Today?"
 document.querySelector("#titleBar").append(h1);
 
-const emoArray = ["🥰","🥕","🧨","❤️","😁","😭","💍","💉","🥂","🙀","🐷","😎","🥳","😠","☹️","😱","🥶","🌙","💘","🫠","😴"]
+const emoArray = ["🥰","🥕","🧨","❤️","😁","😭","💍","🎇","🥂","🙀","🐷","😎","🥳","😠","🦄","☹️","😱","🥶","🌙","💘","🫠","😴","😶‍🌫️","🦋","🦩","🍀","🌈"]
 
-for (let i = 0; i<=6 ; i ++) {
+for (let i = 0; i<=5 ; i ++) {
     const randomEmo = emoArray[Math.floor(Math.random() * emoArray.length)];
     addEmoji(randomEmo)    
 }
