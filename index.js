@@ -3,6 +3,7 @@ function addEmoji(x) {
     emoji1.addEventListener("click", ()=> {
         callApi();
         emoji1.hidden = true;
+       setTimeout(() => emoji1.hidden = false, 5000);
 
     });
     document.querySelector("#emojiBar").append(emoji1);
@@ -29,13 +30,20 @@ for (let i = 0; i<=5 ; i ++) {
 
 
 let btn = document.createElement("button");
-btn.textContent = "Shuffle Emoji"
+btn.textContent = "Shuffle Emoji" 
 btn.addEventListener("click", shuffleEmoji)
 document.querySelector("#shuffleButton").append(btn);
 function shuffleEmoji() {
    
+    const emoArray = ["🥰","🥕","🧨","❤️","😁","😭","💍","🎇","🥂","🙀","🐷","😎","🥳","😠","🦄","☹️","😱","🥶","🌙","💘","🫠","😴","😶‍🌫️","🦋","🦩","🍀","🌈"]
+    document.querySelectorAll("p").forEach((p) => p.remove());
 
+    for (let i = 0; i<=5 ; i ++) {
+        const randomEmo = emoArray[Math.floor(Math.random() * emoArray.length)];
+        addEmoji(randomEmo)    
+    }
 
 }
+
  
 
