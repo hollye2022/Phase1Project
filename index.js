@@ -1,9 +1,10 @@
 function addEmoji(x) {
     let emoji1 = document.createElement("p");
+    emoji1.className = "emos";
     emoji1.addEventListener("click", ()=> {
         callApi();
-        emoji1.hidden = true;
-       setTimeout(() => emoji1.hidden = false, 5000);
+    //     emoji1.hidden = true;
+    //    setTimeout(() => emoji1.hidden = false, 3000);
 
     });
     document.querySelector("#emojiBar").append(emoji1);
@@ -12,9 +13,11 @@ function addEmoji(x) {
 } 
 
 function callApi() {
+    let div = document.getElementById("emoji-quote");
+    
     fetch("https://api.quotable.io/random")
     .then(res => res.json())
-    .then(data => alert(data.content + " By " + data.author))
+    .then(data => div.textContent = `${data.content + " By " + data.author}`)
 }
 
 let h1 = document.createElement("h1")
@@ -34,7 +37,7 @@ btn.textContent = "Shuffle Emoji"
 btn.addEventListener("click", shuffleEmoji)
 document.querySelector("#shuffleButton").append(btn);
 function shuffleEmoji() {
-   
+
     const emoArray = ["🥰","🥕","🧨","❤️","😁","😭","💍","🎇","🥂","🙀","🐷","😎","🥳","😠","🦄","☹️","😱","🥶","🌙","💘","🫠","😴","😶‍🌫️","🦋","🦩","🍀","🌈"]
     document.querySelectorAll("p").forEach((p) => p.remove());
 
@@ -45,5 +48,30 @@ function shuffleEmoji() {
 
 }
 
- 
 
+
+// const postBar = document.getElementById("postBar");
+
+function saveQuote(e){
+    console.log("Savequote called");
+    e.preventDefault();
+    let quote = document.getElementById("fav-quote").value;
+    fetch("http://localhost:3000/quotes",{
+        method: "POST",
+        headers:{
+            "Content-Type": "application/json",
+            Accept:"application/json"
+        },
+        body: JSON.stringify({quote: quote})
+    })
+    .then(res => res.json())
+    .then(data => {
+        let div = document.getElementById("yourQuote")
+        div.textContent = data.quote;
+    })
+
+}
+
+const form = document.getElementById("myForm");
+form.addEventListener("submit",  saveQuote);
+ 
