@@ -10,19 +10,25 @@
     
 </head>
 <body>
-    <div id = "titleBar"></div>
-    <div id = "shuffleButton"></div>
-    <div id = "emojiBar"></div>
-    <div id="emoji-quote"></div>
+    <div id = "title">What Emoji Are You Feeling Today?</div>
+    <div id = "buttons">
+        <button id = "shuffle-emoji">shuffle emoji</button>
+        <button id = "history">emoji history</button>
+    </div>
    
-    <form id="myForm">
-        <label What is your favorite quote? ></label><input type ="text" id="fav-quote"/>
+    <div id = "emoji-bar"></div>
+    <div id ="display-quote"></div>
+
+    <div id = "share">
+        <button id = "share-btn">share</button>
+        <div id = "msg"></div>
+    
+    
+    <form id="my-form">
+        <label What is your favorite quote? ></label><input type ="text" id="fav-quote" placeholder="Your favorite quote"/>
         <input type ="submit" value="post" id="post-btn">
     </form>
-    <div id = "postBar">
-        <div id = yourQuote></div>
-    </div>
-    
+   <div id = "your-quote"></div>
    
     
 </body>

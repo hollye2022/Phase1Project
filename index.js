@@ -7,35 +7,29 @@ function addEmoji(x) {
     //    setTimeout(() => emoji1.hidden = false, 3000);
 
     });
-    document.querySelector("#emojiBar").append(emoji1);
+    document.querySelector("#emoji-bar").append(emoji1);
     emoji1.textContent = `${x}`;
 
 } 
 
 function callApi() {
-    let div = document.getElementById("emoji-quote");
+    let div = document.getElementById("display-quote");
     
     fetch("https://api.quotable.io/random")
     .then(res => res.json())
     .then(data => div.textContent = `${data.content + " By " + data.author}`)
 }
 
-let h1 = document.createElement("h1")
-h1.textContent ="What Emoji Are You Feeling Today?"
-document.querySelector("#titleBar").append(h1);
 
-const emoArray = ["🥰","🥕","🧨","❤️","😁","😭","💍","🎇","🥂","🙀","🐷","😎","🥳","😠","🦄","☹️","😱","🥶","🌙","💘","🫠","😴","😶‍🌫️","🦋","🦩","🍀","🌈"]
+ const emoArray = ["🥰","🥕","🧨","❤️","😁","😭","💍","🎇","🥂","🙀","🐷","😎","🥳","😠","🦄","☹️","😱","🥶","🌙","💘","🫠","😴","😶‍🌫️","🦋","🦩","🍀","🌈","😮‍💨","🥱","👻","🌵"]
 
 for (let i = 0; i<=5 ; i ++) {
     const randomEmo = emoArray[Math.floor(Math.random() * emoArray.length)];
     addEmoji(randomEmo)    
 }
 
+document.getElementById("shuffle-emoji").addEventListener("click", shuffleEmoji)
 
-let btn = document.createElement("button");
-btn.textContent = "Shuffle Emoji" 
-btn.addEventListener("click", shuffleEmoji)
-document.querySelector("#shuffleButton").append(btn);
 function shuffleEmoji() {
 
     const emoArray = ["🥰","🥕","🧨","❤️","😁","😭","💍","🎇","🥂","🙀","🐷","😎","🥳","😠","🦄","☹️","😱","🥶","🌙","💘","🫠","😴","😶‍🌫️","🦋","🦩","🍀","🌈"]
@@ -48,12 +42,10 @@ function shuffleEmoji() {
 
 }
 
+const form = document.getElementById("my-form");
+form.addEventListener("submit",  postQuote);
 
-
-// const postBar = document.getElementById("postBar");
-
-function saveQuote(e){
-    console.log("Savequote called");
+function postQuote(e){
     e.preventDefault();
     let quote = document.getElementById("fav-quote").value;
     fetch("http://localhost:3000/quotes",{
@@ -66,12 +58,24 @@ function saveQuote(e){
     })
     .then(res => res.json())
     .then(data => {
-        let div = document.getElementById("yourQuote")
+        let div = document.getElementById("your-quote")
         div.textContent = data.quote;
     })
 
 }
 
-const form = document.getElementById("myForm");
-form.addEventListener("submit",  saveQuote);
+// // create a share button (you can share the quote you get from the emoji)
+const shareBtn = document.getElementById("share-btn");
+shareBtn.addEventListener("click", async() => {
+    const copyContent = document.getElementById("display-quote").textContent;
+    await navigator.clipboard.writeText(copyContent);
+    const copied = await navigator.clipboard.readText();
+    document.getElementById("msg").textContent = "Quote copied!"
+    // setTimeout(() => document.getElementById("msg").textContent.hidden = true, 3000);
+
+});
+
+
+
+
  

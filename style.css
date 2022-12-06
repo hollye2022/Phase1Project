@@ -1,21 +1,46 @@
-p {
-    font-size: 750%;
-    text-align: center;  
-    display:inline;
-    justify-content: space-evenly
+#title {
+    font-size:xx-large;
+    color: blueviolet;
+    text-align: center;
 }
 
-h1 {
+body {
+    background-color: aqua;
+} 
+
+#buttons {
+    text-align: center;
+}
+
+#buttons button {
+    color:  blue;
+    margin-left: 10px;
+    margin-right:10px;
+    font-size: large;
+}
+
+#share {
+    text-align: center;
+   
+}
+
+#share-btn {
+    color:blue;
+
+}
+
+p {
+    font-size: 650%;
+    text-align: center;  
+    display:inline;
+    justify-content: space-evenly;
+}
+
+#title {
     font-size: xx-large;
     color: blueviolet;
     text-align: center;
 }
 
-#shuffleButton {
-    text-align: center;
-    color:blueviolet;
-}
 
-body {
-    background-color: aqua;
-}
+
