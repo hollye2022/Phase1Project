@@ -2,9 +2,8 @@ function addEmoji(x) {
     let emoji1 = document.createElement("p");
     emoji1.className = "emos";
     emoji1.addEventListener("click", ()=> {
-        callApi();
-    //     emoji1.hidden = true;
-    //    setTimeout(() => emoji1.hidden = false, 3000);
+        callApi() 
+        postHistory(x);
 
     });
     document.querySelector("#emoji-bar").append(emoji1);
@@ -12,16 +11,37 @@ function addEmoji(x) {
 
 } 
 
-function callApi() {
+async function callApi() {
     let div = document.getElementById("display-quote");
     
-    fetch("https://api.quotable.io/random")
+    return fetch("https://api.quotable.io/random")
     .then(res => res.json())
     .then(data => div.textContent = `${data.content + " By " + data.author}`)
 }
 
+async function postHistory(emoji) {
+    await callApi();
+    console.log("posthistory runed");
+    let time = new Date();
+    let emoQuote = document.getElementById("display-quote").textContent;
+    console.log(emoQuote);
+    fetch("http://localhost:3000/quotes", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: JSON.stringify({
+            "date": time,
+            "emoji": emoji,
+            "quote": emoQuote,
 
- const emoArray = ["🥰","🥕","🧨","❤️","😁","😭","💍","🎇","🥂","🙀","🐷","😎","🥳","😠","🦄","☹️","😱","🥶","🌙","💘","🫠","😴","😶‍🌫️","🦋","🦩","🍀","🌈","😮‍💨","🥱","👻","🌵"]
+        })
+    })
+    
+}
+
+ const emoArray = ["🥰","🥕","🧨","❤️","😁","😭","💍","🎇","🥂","🙀","🐷","😎","🥳","😠","🦄","⭐️","😱","🥶","🌙","💘","🫠","😴","😶‍🌫️","🦋","🦩","🍀","🌈","😮‍💨","🥱","👻","🌵","🍄","🌸","❄️"]
 
 for (let i = 0; i<=5 ; i ++) {
     const randomEmo = emoArray[Math.floor(Math.random() * emoArray.length)];
@@ -43,7 +63,7 @@ function shuffleEmoji() {
 }
 
 const form = document.getElementById("my-form");
-form.addEventListener("submit",  postQuote);
+form.addEventListener("submit", postQuote);
 
 function postQuote(e){
     e.preventDefault();
@@ -54,12 +74,12 @@ function postQuote(e){
             "Content-Type": "application/json",
             Accept:"application/json"
         },
-        body: JSON.stringify({quote: quote})
+        body: JSON.stringify({favQuote: quote})
     })
     .then(res => res.json())
     .then(data => {
         let div = document.getElementById("your-quote")
-        div.textContent = data.quote;
+        div.textContent = data.favQuote;
     })
 
 }
@@ -71,11 +91,40 @@ shareBtn.addEventListener("click", async() => {
     await navigator.clipboard.writeText(copyContent);
     const copied = await navigator.clipboard.readText();
     document.getElementById("msg").textContent = "Quote copied!"
-    // setTimeout(() => document.getElementById("msg").textContent.hidden = true, 3000);
+    const msgContent = document.getElementById("msg");
+    msgContent.hidden = false;
+    setTimeout(() => msgContent.hidden = true, 3000);
 
 });
 
 
+document.getElementById("history").addEventListener("click", () => {
+
+   fetch("http://localhost:3000/quotes")
+   .then(res => res.json())
+   .then((data) => {
+        for (let ele of Object.values(data)) {
+            console.log(ele);
+            let li = document.createElement("ol")
+            document.getElementById("action-history").append(li);
+            
+            const div = document.createElement("div")
+            let dateString = ele.date;
+            let dateObject = new Date(Date.parse(dateString))
+            let realDate = dateObject.toLocaleString();
+            div.textContent = realDate;
+
+            const div2 = document.createElement("div");
+            div2.textContent = ele.emoji;
+           
+            const div3 = document.createElement("div")
+            div3.textContent = ele.quote
+           
+            li.append(div, div2, div3);
+        }
+    })
+        
+})
 
 
  

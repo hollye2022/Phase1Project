@@ -1,200 +1,176 @@
 {
   "quotes": [
     {
-      "quote": "abc",
+      "date": "2022-12-06T23:59:46.604Z",
+      "emoji": "🍀",
+      "quote": "Vanity can easily overtake wisdom. It usually overtakes common sense. By Julian Casablancas",
       "id": 1
     },
     {
-      "quote": "def",
+      "date": "2022-12-06T23:59:54.116Z",
+      "emoji": "🐷",
+      "quote": "You cannot travel the path until you have become the path itself. By Buddha",
       "id": 2
     },
     {
-      "quote": "ghi",
+      "date": "2022-12-07T00:00:19.928Z",
+      "emoji": "🌈",
+      "quote": "There is no charm equal to tenderness of heart. By Jane Austen",
       "id": 3
     },
     {
-      "quote": "ddd",
+      "date": "2022-12-07T00:03:12.102Z",
+      "emoji": "🦩",
+      "quote": "The things that one most wants to do are the things that are probably most worth doing. By Winifred Holtby",
       "id": 4
     },
     {
-      "quote": "eee",
+      "date": "2022-12-07T00:05:11.811Z",
+      "emoji": "🧨",
+      "quote": "Love at first sight is easy to understand; it's when two people have been looking at each other for a lifetime that it becomes a miracle. By Amy Bloom",
       "id": 5
     },
     {
-      "quote": "aaa",
+      "date": "2022-12-07T00:06:02.726Z",
+      "emoji": "❤️",
+      "quote": "Change is the law of life. And those who look only to the past or present are certain to miss the future. By John F. Kennedy",
       "id": 6
     },
     {
-      "quote": "rrr",
+      "date": "2022-12-07T00:07:28.239Z",
+      "emoji": "🍄",
+      "quote": "While we stop to think, we often miss our opportunity. By Publilius Syrus",
       "id": 7
     },
     {
-      "quote": "ggg",
+      "date": "2022-12-07T00:07:38.458Z",
+      "emoji": "🦋",
+      "quote": "We must become the change we want to see. By Mahatma Gandhi",
       "id": 8
     },
     {
-      "quote": "ttt",
+      "date": "2022-12-07T00:07:41.183Z",
+      "emoji": "🦋",
+      "quote": "Wise men make more opportunities than they find. By Francis Bacon",
       "id": 9
     },
     {
-      "quote": "yyy",
+      "date": "2022-12-07T00:08:12.127Z",
+      "emoji": "🦩",
+      "quote": "All love that has not friendship for its base, is like a mansion built upon the sand. By Ella Wheeler Wilcox",
       "id": 10
     },
     {
-      "quote": "ggg",
+      "date": "2022-12-07T00:08:31.133Z",
+      "emoji": "🌵",
+      "quote": "One man practicing sportsmanship is far better than a hundred teaching it. By Knute Rockne",
       "id": 11
     },
     {
-      "quote": "abcdefg",
+      "date": "2022-12-07T00:11:23.045Z",
+      "emoji": "🌸",
+      "quote": "O, what a tangled web we weave when first we practice to deceive! By Walter Scott",
       "id": 12
     },
     {
-      "quote": "helloggg",
+      "date": "2022-12-07T00:11:32.683Z",
+      "emoji": "🌵",
+      "quote": "I walk slowly, but I never walk backward. By Abraham Lincoln",
       "id": 13
     },
     {
-      "quote": "hi",
+      "date": "2022-12-07T00:11:40.782Z",
+      "emoji": "🦩",
+      "quote": "It is better to understand a little than to misunderstand a lot. By Anatole France",
       "id": 14
     },
     {
-      "quote": "hi",
+      "favQuote": "It is better to understand a little than to misunderstand a lot. By Anatole France",
       "id": 15
     },
     {
-      "quote": "hi",
+      "date": "2022-12-07T00:13:01.743Z",
+      "emoji": "🦋",
+      "quote": "Learn from yesterday, live for today, hope for tomorrow. By Albert Einstein",
       "id": 16
     },
     {
-      "quote": "hi",
+      "date": "2022-12-07T00:22:30.376Z",
+      "emoji": "💘",
+      "quote": "If you're walking down the right path and you're willing to keep walking, eventually you'll make progress. By Barack Obama",
       "id": 17
     },
     {
-      "quote": "hi",
+      "favQuote": "If you're walking down the right path and you're willing to keep walking, eventually you'll make progress. By Barack Obama",
       "id": 18
     },
     {
-      "quote": "hi",
+      "date": "2022-12-07T00:34:31.256Z",
+      "emoji": "🎇",
+      "quote": "Every great dream begins with a dreamer. Always remember, you have within you the strength, the patience, and the passion to reach for the stars to change the world. By Harriet Tubman",
       "id": 19
     },
     {
-      "quote": "hi",
+      "date": "2022-12-07T00:37:46.786Z",
+      "emoji": "🫠",
+      "quote": "A dream is your creative vision for your life in the future. You must break out of your current comfort zone and become comfortable with the unfamiliar and the unknown. By Denis Waitley",
       "id": 20
     },
     {
-      "quote": "hi",
+      "date": "2022-12-07T00:42:47.924Z",
+      "emoji": "🥳",
+      "quote": "Of course there is no formula for success except perhaps an unconditional acceptance of life and what it brings. By Arthur Rubinstein",
       "id": 21
     },
     {
-      "quote": "hello",
+      "date": "2022-12-07T00:45:37.836Z",
+      "emoji": "🧨",
+      "quote": "There are three methods to gaining wisdom. The first is reflection, which is the highest. The second is limitation, which is the easiest. The third is experience, which is the bitterest. By Confucius",
       "id": 22
     },
     {
-      "quote": "hi",
+      "date": "2022-12-07T00:46:57.737Z",
+      "emoji": "🌙",
+      "quote": "Give a man a fish and you feed him for a day. Teach him how to fish and you feed him for a lifetime. By Laozi",
       "id": 23
     },
     {
-      "quote": "hi",
+      "favQuote": "eee",
       "id": 24
     },
     {
-      "quote": "hii",
+      "date": "2022-12-07T00:52:58.523Z",
+      "emoji": "🍄",
+      "quote": "Technology frightens me to death. It's designed by engineers to impress other engineers. And they always come with instruction booklets that are written by engineers for other engineers — which is why almost no technology ever works. By John Cleese",
       "id": 25
     },
     {
-      "quote": "hii",
+      "date": "2022-12-07T00:54:06.752Z",
+      "emoji": "❄️",
+      "quote": "He who conquers others is strong; He who conquers himself is mighty. By Laozi",
       "id": 26
     },
     {
-      "quote": "hii",
+      "date": "2022-12-07T01:10:41.423Z",
+      "emoji": "🥕",
+      "quote": "Self-trust is the first secret of success. By Ralph Waldo Emerson",
       "id": 27
     },
     {
-      "quote": "hii",
+      "favQuote": "Self-trust is the first secret of success. By Ralph Waldo Emerson",
       "id": 28
     },
     {
-      "quote": "hii",
+      "date": "2022-12-07T01:17:08.615Z",
+      "emoji": "🥱",
+      "quote": "Wisdom alone is the science of other sciences. By Plato",
       "id": 29
     },
     {
-      "quote": "hii",
+      "date": "2022-12-07T01:18:12.821Z",
+      "emoji": "🌵",
+      "quote": "To be happy is to be able to become aware of oneself without fright. By Walter Benjamin",
       "id": 30
-    },
-    {
-      "quote": "ggg",
-      "id": 31
-    },
-    {
-      "quote": "ggg",
-      "id": 32
-    },
-    {
-      "quote": "gu",
-      "id": 33
-    },
-    {
-      "quote": "hi",
-      "id": 34
-    },
-    {
-      "quote": "hi",
-      "id": 35
-    },
-    {
-      "quote": "yyy",
-      "id": 36
-    },
-    {
-      "quote": "yy6",
-      "id": 37
-    },
-    {
-      "quote": "hi",
-      "id": 38
-    },
-    {
-      "quote": "hello",
-      "id": 39
-    },
-    {
-      "quote": "hi",
-      "id": 40
-    },
-    {
-      "quote": "hiel",
-      "id": 41
-    },
-    {
-      "quote": "hielhu",
-      "id": 42
-    },
-    {
-      "quote": "",
-      "id": 43
-    },
-    {
-      "quote": "hi",
-      "id": 44
-    },
-    {
-      "quote": "I am happy today!",
-      "id": 45
-    },
-    {
-      "quote": "Goals are the fuel in the furnace of achievement. By Brian Tracy",
-      "id": 46
-    },
-    {
-      "quote": "Technology is anything that wasn't around when you were born. By Man Ray",
-      "id": 47
-    },
-    {
-      "quote": "Never promise more than you can perform. By Publilius Syrus",
-      "id": 48
-    },
-    {
-      "quote": "Reality leaves a lot to the imagination. By John Lennon",
-      "id": 49
     }
   ]
 }

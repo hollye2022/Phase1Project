@@ -10,6 +10,7 @@ body {
 
 #buttons {
     text-align: center;
+    margin: 30px 20px 10px 20px;
 }
 
 #buttons button {
@@ -26,21 +27,40 @@ body {
 
 #share-btn {
     color:blue;
+    font-size: large;
+    margin: 0px 20px 10px 20px;
+
+}
+
+#emoji-bar {
+    text-align: center; 
 
 }
 
 p {
     font-size: 650%;
     text-align: center;  
-    display:inline;
-    justify-content: space-evenly;
+    display:inline-block;
+    /* margin:auto; */
+    /* justify-content: space-evenly; */
 }
 
-#title {
-    font-size: xx-large;
-    color: blueviolet;
-    text-align: center;
+
+#post-btn  {
+    font-size: large;
+    color:blue;
 }
+
+#fav-quote {
+    font-size: large;
+    color:blue;
+}
+
+div {
+    text-align: left;
+    font-size: large;
+}
+
 
 
 
