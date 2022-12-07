@@ -183,6 +183,40 @@
       "emoji": "🦄",
       "quote": "One needs something to believe in, something for which one can have whole-hearted enthusiasm. One needs to feel that one's life has meaning, that one is needed in this world. By Hannah Szenes",
       "id": 32
+    },
+    {
+      "favQuote": "yyy",
+      "id": 33
+    },
+    {
+      "favQuote": "yy",
+      "id": 34
+    },
+    {
+      "favQuote": "hello",
+      "id": 35
+    },
+    {
+      "date": "2022-12-07T02:14:27.205Z",
+      "emoji": "🍄",
+      "quote": "You can't stop the waves, but you can learn to surf. By Jon Kabat-Zinn",
+      "id": 36
+    },
+    {
+      "favQuote": "You can't stop the waves, but you can learn to surf. By Jon Kabat-Zinn",
+      "id": 37
+    },
+    {
+      "date": "2022-12-07T02:15:15.671Z",
+      "emoji": "💍",
+      "quote": "Friendship is one mind in two bodies. By Mencius",
+      "id": 38
+    },
+    {
+      "date": "2022-12-07T13:39:25.300Z",
+      "emoji": "🦄",
+      "quote": "Friends... they cherish one another's hopes. They are kind to one another's dreams. By Henry David Thoreau",
+      "id": 39
     }
   ]
 }
