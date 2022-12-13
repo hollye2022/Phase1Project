@@ -72,13 +72,15 @@ form.addEventListener("submit", postQuote);
 function postQuote(e){
     e.preventDefault();
     let quote = document.getElementById("fav-quote").value;
+    let date = new Date();
+    console.log(date);
     fetch(quotesURL,{
         method: "POST",
         headers:{
             "Content-Type": "application/json",
             Accept:"application/json"
         },
-        body: JSON.stringify({favQuote: quote})
+        body: JSON.stringify({favQuote: quote},{date: date})
     })
     .then(res => res.json())
     .then(data => {
