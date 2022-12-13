@@ -1,3 +1,5 @@
+let quotesURL = "https://postquotes.onrender.com/quotes";
+
 function addEmoji(x) {
     let emoji1 = document.createElement("p");
     emoji1.className = "emos";
@@ -25,7 +27,7 @@ async function postHistory(emoji) {
     let time = new Date();
     let emoQuote = document.getElementById("display-quote").textContent;
     console.log(emoQuote);
-    fetch("http://localhost:3000/quotes", {
+    fetch(quotesURL, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -52,8 +54,8 @@ for (let i = 0; i<=5 ; i ++) {
 
 document.getElementById("shuffle-emoji").addEventListener("click", shuffleEmoji)
 
-function shuffleEmoji() {
-
+function shuffleEmoji(e) {
+console.log(e);
     const emoArray = ["🥰","🥕","🧨","❤️","😁","😭","💍","🎇","🥂","🙀","🐷","😎","🥳","😠","🦄","☹️","😱","🥶","🌙","💘","🫠","😴","😶‍🌫️","🦋","🦩","🍀","🌈"]
     document.querySelectorAll("p").forEach((p) => p.remove());
 
@@ -70,7 +72,7 @@ form.addEventListener("submit", postQuote);
 function postQuote(e){
     e.preventDefault();
     let quote = document.getElementById("fav-quote").value;
-    fetch("http://localhost:3000/quotes",{
+    fetch(quotesURL,{
         method: "POST",
         headers:{
             "Content-Type": "application/json",
@@ -102,7 +104,7 @@ shareBtn.addEventListener("click", async() => {
 
 document.getElementById("history").addEventListener("click", () => {
 
-   fetch("http://localhost:3000/quotes")
+   fetch(quotesURL)
    .then(res => res.json())
    .then((data) => {
         for (let ele of Object.values(data)) {
@@ -129,4 +131,4 @@ document.getElementById("history").addEventListener("click", () => {
 })
 
 
- 
+
