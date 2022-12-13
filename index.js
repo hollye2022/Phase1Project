@@ -66,29 +66,44 @@ console.log(e);
 
 }
 
-const form = document.getElementById("my-form");
+document.addEventListener("DOMContentLoaded", handleEvent)
+
+function handleEvent(e){
+    e.preventDefault();
+    const form = document.getElementById("my-form");
 form.addEventListener("submit", postQuote);
 
 function postQuote(e){
     e.preventDefault();
-    let quote = document.getElementById("fav-quote").value;
-    let date = new Date();
-    console.log(date);
-    fetch(quotesURL,{
-        method: "POST",
-        headers:{
-            "Content-Type": "application/json",
-            Accept:"application/json"
-        },
-        body: JSON.stringify({favQuote: quote},{date: date})
-    })
-    .then(res => res.json())
-    .then(data => {
-        let div = document.getElementById("your-quote")
-        div.textContent = data.favQuote;
-    })
+    let div = document.getElementById("your-quote");
+    let input = document.getElementById("fav-quote");
+   div.textContent =input.value;
+}
 
 }
+
+
+//  no need to update in the datebase, since i am not retrieving it anyways.
+// function postQuote(e){
+//     e.preventDefault();
+//     let quote = document.getElementById("fav-quote").value;
+//     let date = new Date();
+//     console.log(date);
+//     fetch(quotesURL,{
+//         method: "POST",
+//         headers:{
+//             "Content-Type": "application/json",
+//             Accept:"application/json"
+//         },
+//         body: JSON.stringify({favQuote: quote},{date: date})
+//     })
+//     .then(res => res.json())
+//     .then(data => {
+//         let div = document.getElementById("your-quote")
+//         div.textContent = data.favQuote;
+//     })
+
+// }
 
 // // create a share button (you can share the quote you get from the emoji)
 const shareBtn = document.getElementById("share-btn");
